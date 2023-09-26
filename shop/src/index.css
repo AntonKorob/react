@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+*{
+  margin: 10;
+  padding: 10;
+}
+
+body{
+  background: rgba(225, 249, 255, 0.925);
+  color: rgb(0, 0, 0);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+.wrapper{
+  width: 1280px;
+  margin: 50px auto;
+}
+header{
+  position: relative;
+}
+
+header .logo{
+  font-weight: 600;
+  font-size: 20px;
+}
+header ul.nav{
+  float: right;
+  list-style: none;
+}
+header ul.nav li{
+  
+  padding: 5px;
+  display: inline;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: opacity 300ms ease-out;
+}
+header ul.nav li:hover{
+  opacity: 0.5;
+  border: 2px solid rgb(134, 130, 130);
+  border-radius: 4px;
+}
+
+header .shop-cart-btn{
+  width: 20px;
+  height: 20px;
+  float: right;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+header .shop-cart-btn:hover,
+header .shop-cart-btn.active{
+  color: #e69d9d;
+  transform: scale(1.3);
+}
+
+header .shop-cart{
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 450px;
+  border-radius: 5px;
+  background: rgb(234, 242, 243);
+  box-shadow: 6px 13px 32px 12px rgba(130,106,106,0.75);
+  -webkit-box-shadow: 6px 13px 32px 12px rgba(130,106,106,0.75);
+  -moz-box-shadow: 6px 13px 32px 12px rgba(130,106,106,0.75);
+  z-index: 1000;
+  padding: 20px;
+  padding-bottom: 5;
+}
+
+header .shop-cart .item{
+  padding: 12px;
+  width: 100%;
+  float: left;
+
+}
+header .shop-cart .summa{
+  float: left;
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  color: #32385c;
+}
+header .shop-cart .item .empty h2{
+  font-size: 20px;
+  margin-bottom: 20px;
+  top: -25px;
+
+}
+
+header .shop-cart .item .delete-icon{
+  padding-right: 20px;
+  color: rgb(180, 50, 82);
+  float: right;
+  position: relative;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+
+}
+header .shop-cart .item .delete-icon:hover{
+  color: #f30f0f;
+  transform: scale(1.3);
+}
+
+header .shop-cart .item img{
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+
+}
+
+header .shop-cart .item h2{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+header .shop-cart .item b{
+  color: #557e88;
+  font-weight: 600;
+}
+
+
+
+header .presentation{
+  margin: 50px 0;
+  background: url(./img/img_bg.jpeg) no-repeat;
+  width: 100%;
+  height: 500px;
+  background-size:cover;
+  background-position: center center ;
+  background-blend-mode: multiply ;
+  background-color: #bcbcbc;
+  position: relative;
+}
+header .presentation::after{
+  content: 'Лучшией сервис для вашего авто';
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 300px;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+
+}
+header .presentation::before{
+  content: 'По низким ценам';
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  width: 300px;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+
+}
+
+.categories div{
+  display: inline-block;
+  background: rgb(171, 228, 228);
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 500ms ease;
+
+}
+
+.categories div:hover{
+  border-color: rgb(99, 102, 102);
+  transform: scale(1.1);
+}
+
+.full-item{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.685);
+  z-index: 9999;
+  overflow: auto;
+}
+
+.full-item > div{
+  width: 600px;
+  position: relative;
+  margin: 10% auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 10;
+}
+
+main{
+  padding: 5px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+
+}
+
+main .item{
+  padding: 15px;
+  width: 40%;
+  margin-bottom: 50px;
+  background: rgb(206, 230, 230);
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+main .item img, .full-item img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  transition: transform 500ms ease;
+  cursor: pointer;
+}
+
+main .item img:hover, .full-item img:hover{
+  transform: scale(1.05);
+}
+
+main h2, .full-item h2,
+main p,.full-item p,
+main b,.full-item b{
+  margin: 10px 20px;
+  color: #5f69a3;
+}
+
+main b{
+  color: rgb(77, 72, 72);
+}
+
+main .add-to-cart,
+.full-item .add-to-cart{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: rgb(207, 92, 92);
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 500ms ease;
+
+}
+
+main .add-to-cart:hover,
+.full-item .add-to-cart:hover{
+  transform: scale(1.3) translateY(-5px);
+}
+
+
+footer{
+  text-align: centr;
+  margin-top: 100px;
+
+}
