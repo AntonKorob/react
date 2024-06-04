@@ -1,3 +1,8 @@
+<p>Сайт "Автосервис - СТО" с лендингом. Собранный на Html, JavaScript, React app.</p>
+<p>Создан по модели React app.</p>
+<p>В нем можно перемещаться по сайту с помощью кнопок UI.</p>
+<p>Учебный проект, без релиза</p>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
